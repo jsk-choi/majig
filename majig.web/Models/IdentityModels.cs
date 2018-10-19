@@ -33,7 +33,7 @@ namespace majig.web.Models
         {
             base.OnModelCreating(modelBuilder); // This needs to go before the other rules!
 
-            modelBuilder.Entity<ApplicationUser>().ToTable("_User");
+            modelBuilder.Entity<ApplicationUser>().ToTable("_Users");
             modelBuilder.Entity<IdentityRole>().ToTable("_Role");
             modelBuilder.Entity<IdentityUserRole>().ToTable("_UserRole");
             modelBuilder.Entity<IdentityUserClaim>().ToTable("_UserClaim");
