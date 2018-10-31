@@ -7,7 +7,6 @@ Supply your own connection string file, name it connStr.config, put it in root f
 
 ``` 
 <connectionStrings>
-  <add name="DefaultConnection" connectionString="[your own conn str]" providerName="System.Data.SqlClient" />
-  <add name="majigDb" connectionString="[your own conn str]" providerName="System.Data.SqlClient" />
+  <add name="majigDb" connectionString="data source=[svr];initial catalog=majig;user id=[usr];password=[pwd];MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
 </connectionStrings>
 ``` 

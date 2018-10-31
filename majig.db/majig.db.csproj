@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="dbContext.cs" />
     <Compile Include="majigDbCtx.cs" />
+    <Compile Include="NewFolder1\Asset.cs" />
+    <Compile Include="NewFolder1\Model1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
