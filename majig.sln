@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "majig.db", "majig.db\majig.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "majig.web", "majig.web\majig.web.csproj", "{5E9A1D2E-90A1-4C5B-9AA0-40156ECBE3C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "majig.scratch", "majig.scratch\majig.scratch.csproj", "{5CB16CAF-106F-40DD-88EB-841B267FD4FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5E9A1D2E-90A1-4C5B-9AA0-40156ECBE3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E9A1D2E-90A1-4C5B-9AA0-40156ECBE3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E9A1D2E-90A1-4C5B-9AA0-40156ECBE3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB16CAF-106F-40DD-88EB-841B267FD4FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB16CAF-106F-40DD-88EB-841B267FD4FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB16CAF-106F-40DD-88EB-841B267FD4FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB16CAF-106F-40DD-88EB-841B267FD4FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

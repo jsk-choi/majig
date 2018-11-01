@@ -4,10 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using majig.service;
+
 namespace majig.web.Controllers
 {
     public class HomeController : Controller
     {
+        private IDooIt DooIt;
+
+        public HomeController(IDooIt DooIt) {
+            this.DooIt = DooIt;
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -15,8 +23,7 @@ namespace majig.web.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message = "Your application description page. " + this.DooIt.getIt(34).ToString();
             return View();
         }
 
