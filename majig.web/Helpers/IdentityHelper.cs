@@ -29,7 +29,7 @@ namespace majig.web
                 var roleresult = roleManager.Create(new IdentityRole(RoleNames.ROLE_USER));
             }
 
-            string userName = "admin@esk8life.com";
+            string userName = "admin@admin.com";
             string password = "[password]";
 
             ApplicationUser user = userManager.FindByName(userName);
