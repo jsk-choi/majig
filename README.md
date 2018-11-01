@@ -15,5 +15,5 @@ Using SQL Server:
 
 1. Run majig.web db migrations (PM > update-database)
 2. Launch majig.web (to seed admin user)
-3. Execute majig.sql - 03 esk8r_schema.sql
-4. Execute majig.sql - 04 esk8r_data.sql
+3. Execute majig.sql - 03 majig_schema.sql
+4. Execute majig.sql - 04 majig_data.sql
