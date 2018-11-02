@@ -10,7 +10,7 @@ namespace majig.web.Controllers
 {
     public class HomeController : Controller
     {
-        private IDooIt DooIt;
+        private readonly IDooIt DooIt;
 
         public HomeController(IDooIt DooIt) {
             this.DooIt = DooIt;
