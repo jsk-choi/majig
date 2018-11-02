@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace majig.service
 {
-    internal class DooIt : IDooIt
+    public class DooIt : IDooIt
     {
         public int getIt(int num) {
             return num * 2;

@@ -1,4 +1,7 @@
-﻿using Microsoft.Owin;
+﻿using majig.db;
+
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(majig.web.Startup))]
