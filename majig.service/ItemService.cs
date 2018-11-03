@@ -50,6 +50,7 @@ namespace majig.service
                     thisItem.UniqueId = item.UniqueId;
                     thisItem.ParentId = item.ParentId;
                     thisItem.CategoryId = item.CategoryId;
+                    thisItem.CreateDate = DateTime.Now;
                     thisItem.ConfigHeaderId = item.ConfigHeaderId;
                     thisItem.BrandId = item.BrandId;
                     thisItem.ItemName = item.ItemName;

@@ -65,6 +65,7 @@
     <Compile Include="efModel\C_Users.cs" />
     <Compile Include="MajigContext.cs" />
     <Compile Include="efModel\Item.cs" />
+    <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="efModel\vCompat.cs" />

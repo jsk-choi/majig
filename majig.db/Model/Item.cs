@@ -15,6 +15,7 @@ namespace majig.db.model
         public string Category { get; set; }
         public string ItemName { get; set; }
         public string ItemDesc { get; set; }
+        public string UniqueId { get; set; }
         public string Url { get; set; }
         public decimal Price { get; set; }
     }

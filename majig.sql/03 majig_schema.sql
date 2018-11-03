@@ -18,6 +18,7 @@ IF EXISTS(SELECT * FROM sys.tables WHERE NAME = 'Category')		DROP TABLE dbo.Cate
 IF EXISTS(SELECT * FROM sys.views WHERE NAME = 'vCompat')		DROP VIEW dbo.vCompat
 IF EXISTS(SELECT * FROM sys.views WHERE NAME = 'vConfig')		DROP VIEW dbo.vConfig
 IF EXISTS(SELECT * FROM sys.views WHERE NAME = 'vItems')		DROP VIEW dbo.vItems
+IF EXISTS(SELECT * FROM sys.views WHERE NAME = 'vCategory')		DROP VIEW dbo.vCategory
 GO
 
 IF EXISTS(SELECT * FROM sys.tables WHERE name = '_Users')
@@ -596,6 +597,7 @@ select
 
 	i.ItemName,
 	i.ItemDesc,
+	i.UniqueId,
 	i.Url,
 	i.Price
 from dbo.Item i
@@ -627,3 +629,17 @@ from CompatHeader ch
 	join vItems i
 		on cd.ItemId = i.ItemId
 go
+
+CREATE VIEW dbo.vCategory
+AS
+WITH CatCte AS (
+	SELECT Id, Active, ParentId, Category, UserId, CAST(Category AS NVARCHAR(1000)) AS Crumb
+	FROM Category
+	WHERE ParentId IS NULL
+	UNION ALL 
+	SELECT c.Id, c.Active, c.ParentId, c.Category, c.UserId, CAST(Crumb + ' > ' + c.Category AS NVARCHAR(1000))
+	FROM Category c
+		JOIN CatCte cte
+			ON cte.Id = c.ParentId
+)
+SELECT * FROM CatCte;

@@ -17,6 +17,7 @@ namespace majig.web
             Mapper.Initialize(c => {
                 c.CreateMap<db.ef.vItems, db.model.Item>();
                 c.CreateMap<db.ef.Item, db.model.Item>();
+                c.CreateMap<db.ef.Category, db.model.Category>();
             });
         }
     }

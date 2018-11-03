@@ -41,6 +41,9 @@ namespace majig.db.ef
         [StringLength(2000)]
         public string ItemDesc { get; set; }
 
+        [StringLength(100)]
+        public string UniqueId { get; set; }
+
         [StringLength(200)]
         public string Url { get; set; }
 

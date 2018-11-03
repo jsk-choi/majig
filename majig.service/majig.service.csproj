@@ -59,7 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StartUp.cs" />
+    <Compile Include="Interface\ICategoryService.cs" />
+    <Compile Include="CategoryService.cs" />
     <Compile Include="ItemService.cs" />
     <Compile Include="DooIt.cs" />
     <Compile Include="Interface\IItemService.cs" />
