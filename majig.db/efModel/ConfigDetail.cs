@@ -1,4 +1,4 @@
-namespace majig.db
+namespace majig.db.ef
 {
     using System;
     using System.Collections.Generic;

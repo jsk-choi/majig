@@ -17,7 +17,7 @@ using majig.web.Models;
 
 namespace majig.web
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         protected void Application_Start()
         {
@@ -29,7 +29,6 @@ namespace majig.web
 
             var dbCtx = new ApplicationDbContext();
             IdentityHelper.SeedIdentities(dbCtx);
-
 
             // AUTOFAC IOC
             var builder = new ContainerBuilder();

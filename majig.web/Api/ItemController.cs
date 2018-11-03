@@ -5,6 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
+using AutoMapper;
+
 using majig.service;
 
 namespace majig.web.Api
@@ -19,20 +21,25 @@ namespace majig.web.Api
         }
 
         // GET: api/Item
-        public IEnumerable<string> Get()
+        public IHttpActionResult Get()
         {
-            return new string[] { "value1", "value2", this.ItemService.getIt(33).ToString() };
+            var items = ItemService.Get();
+            var itemsDto = Mapper.Map<IEnumerable<db.model.Item>>(items);
+            return Ok(itemsDto);
         }
 
         // GET: api/Item/5
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            var item = ItemService.Get(id);
+            var itemDto = Mapper.Map<db.model.Item>(item);
+            return Ok(itemDto);
         }
 
         // POST: api/Item
-        public void Post([FromBody]string value)
+        public void Post([FromBody]db.model.Item item)
         {
+
         }
 
         // PUT: api/Item/5

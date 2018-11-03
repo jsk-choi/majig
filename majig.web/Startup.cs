@@ -1,8 +1,9 @@
-﻿using majig.db;
-
+﻿
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Owin;
 using Owin;
+using AutoMapper;
+using majig.db;
 
 [assembly: OwinStartupAttribute(typeof(majig.web.Startup))]
 namespace majig.web
@@ -12,6 +13,11 @@ namespace majig.web
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+
+            Mapper.Initialize(c => {
+                c.CreateMap<db.ef.vItems, db.model.Item>();
+                c.CreateMap<db.ef.Item, db.model.Item>();
+            });
         }
     }
 }

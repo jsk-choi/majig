@@ -12,13 +12,13 @@ namespace majig.scratch
     {
         static void Main(string[] args)
         {
-            using (var db = new MajigContext()) {
-                var jjj = db.vItems.ToList();
-                foreach (var item in jjj)
-                {
-                    Console.WriteLine(item.ItemName);
-                }
-            }
+            //using (var db = new MajigContext()) {
+            //    var jjj = db.vItems.ToList();
+            //    foreach (var item in jjj)
+            //    {
+            //        Console.WriteLine(item.ItemName);
+            //    }
+            //}
         }
     }
 }

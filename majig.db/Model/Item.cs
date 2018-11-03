@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace majig.db.Model
+namespace majig.db.model
 {
     public class Item
     {
