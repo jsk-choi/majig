@@ -24,6 +24,7 @@ namespace majig.db.ef
         public virtual DbSet<ConfigDetail> ConfigDetail { get; set; }
         public virtual DbSet<ConfigHeader> ConfigHeader { get; set; }
         public virtual DbSet<Item> Item { get; set; }
+        public virtual DbSet<vCategory> vCategory { get; set; }
         public virtual DbSet<vCompat> vCompat { get; set; }
         public virtual DbSet<vConfig> vConfig { get; set; }
         public virtual DbSet<vItems> vItems { get; set; }
